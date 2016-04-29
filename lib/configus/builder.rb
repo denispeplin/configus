@@ -18,7 +18,7 @@ module Configus
       env_name = env || @current_env
       e = @envs[env_name]
       unless e
-        raise "Call undefined env '#{env_name}'"
+        raise "Call undefined env '#{env_name}'. env: #{env}, current_env: #{@current_env}, envs: #{@envs}"
       end
 
       current_config = {}
